@@ -25,7 +25,7 @@ public class Movie implements Serializable {
 	private String title;
 	private String subTitle;
 	private Integer year;
-	private String imgUri;
+	private String imgUrl;
 	private String synopsis;
 	
 	@ManyToOne
@@ -38,13 +38,13 @@ public class Movie implements Serializable {
 	public Movie() {
 	}
 
-	public Movie(Long id, String title, String subTitle, Integer year, String imgUri, String synopsis) {
+	public Movie(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.subTitle = subTitle;
 		this.year = year;
-		this.imgUri = imgUri;
+		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
 	}
 
@@ -80,12 +80,12 @@ public class Movie implements Serializable {
 		this.year = year;
 	}
 
-	public String getImgUri() {
-		return imgUri;
+	public String getImgUrl() {
+		return imgUrl;
 	}
 
-	public void setImgUri(String imgUri) {
-		this.imgUri = imgUri;
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 
 	public String getSynopsis() {

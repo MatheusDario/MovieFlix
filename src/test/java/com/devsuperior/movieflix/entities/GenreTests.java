@@ -3,6 +3,8 @@ package com.devsuperior.movieflix.entities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import com.devsuperior.movieflix.entitie.Genre;
+
 public class GenreTests {
 
 	@Test

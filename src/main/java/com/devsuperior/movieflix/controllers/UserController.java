@@ -17,10 +17,15 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	@GetMapping(value = "/profile")
-	public ResponseEntity<UserDTO> findProfile(@PathVariable Long id) {
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<UserDTO> findById(@PathVariable Long id) {
 		UserDTO dto = service.findById(id);
 		return ResponseEntity.ok().body(dto);
 	}
-
+	
+	@GetMapping(value = "/profile")
+	public ResponseEntity<UserDTO> findProfile() {
+		UserDTO dto = service.findProfile();
+		return ResponseEntity.ok().body(dto);
+	}
 }
